@@ -3,13 +3,13 @@
 # 或者运行目录下的config.yml
 #---------------------------------------------------#
 # 混合端口 HTTP和SOCKS5用一个端口
-mixed-port: 7890
+mixed-port: 18111
 
 # HTTP 代理端口
-# port: 7890
+# port: 18111
 
 # SOCKS5 代理端口
-socks-port: 7891
+socks-port: 18111
 
 # Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
 # redir-port: 7892
@@ -32,7 +32,7 @@ ipv6: true
 log-level: info
 
 # Clash 的 RESTful API
-external-controller: '127.0.0.1:9090'
+external-controller: '0.0.0.0:36927'
 
 # 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
 # 参数应填写配置目录的相对路径或绝对路径。
@@ -130,8 +130,8 @@ experimental:
 
 # Clash for Windows
 # Proxies module latency test settings
-cfw-latency-timeout: 3000
-cfw-latency-url: http://www.gstatic.com/generate_204
+cfw-latency-timeout: 2000
+cfw-latency-url: https://speedtest.galgamer.eu.org/200m.png
 
 # 混合配置（mixin）
 # 支持向所有配置文件中注入公共属性设置
@@ -244,6 +244,9 @@ cfw-bypass-bak:
 cfw-bypass:
   # 直连列表
   # MyList
+  - "*.upwork.com"
+  - "*.fiverr.com"
+  - "*.haishan.me"
   - "*.13th.tech"
   - "*.423down.com"
   - "*.bokecc.com"
